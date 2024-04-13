@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: virtual-argocds
+  name: virtual-clusters
 spec:
   destination:
     namespace: crossplane-system

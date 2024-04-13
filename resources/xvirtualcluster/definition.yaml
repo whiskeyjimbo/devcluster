@@ -1,15 +1,15 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
-  name: xvirtualargocds.demo.codefresh.io
+  name: xvirtualclusters.dev.whiskeyjimbo.io
 spec:
-  group: demo.codefresh.io
+  group: dev.whiskeyjimbo.io
   names:
-    kind: XVirtualArgoCD
-    plural: xvirtualargocds
+    kind: XVirtualCluster
+    plural: xvirtualclusters
   claimNames:
-    kind: VirtualArgoCD
-    plural: virtualargocds
+    kind: VirtualCluster
+    plural: virtualclusters
   versions:
   - name: v1alpha1
     served: true
