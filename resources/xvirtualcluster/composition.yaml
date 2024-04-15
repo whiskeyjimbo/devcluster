@@ -25,8 +25,8 @@ spec:
             syncer:
               extraArgs:
               - --out-kube-config-secret=vcluster-kubeconfig
-              - --out-kube-config-server=https://vcluster-test.vcluster-test.svc.cluster.local
-              - --tls-san=vcluster-test.vcluster-test.svc.cluster.local
+              - --out-kube-config-server=https://vcluster-test.vcluster-test.svc.cluster.test
+              - --tls-san=vcluster-test.vcluster-test.svc.cluster.test
               - --kube-config-context-name=vcluster
             sync:
               ingresses:
@@ -53,7 +53,7 @@ spec:
         - fromFieldPath: metadata.name
         strategy: string
         string:
-          fmt: "--out-kube-config-server=https://%s-vcluster.%s.svc.cluster.local"
+          fmt: "--out-kube-config-server=https://%s-vcluster.%s.svc.cluster.test"
       toFieldPath: spec.forProvider.values.syncer.extraArgs[1]
     - type: CombineFromComposite
       combine:
@@ -62,12 +62,11 @@ spec:
         - fromFieldPath: metadata.name
         strategy: string
         string:
-          fmt: "--tls-san=%s-vcluster.%s.svc.cluster.local"
+          fmt: "--tls-san=%s-vcluster.%s.svc.cluster.test"
       toFieldPath: spec.forProvider.values.syncer.extraArgs[2]
     - type: CombineFromComposite
       combine:
         variables:
-        - fromFieldPath: metadata.name
         - fromFieldPath: metadata.name
         strategy: string
         string:
