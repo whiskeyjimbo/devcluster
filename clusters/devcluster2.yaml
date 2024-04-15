@@ -1,7 +1,7 @@
-# apiVersion: dev.whiskeyjimbo.io/v1alpha1
-# kind: VirtualCluster
-# metadata:
-#   name: devcluster2
+apiVersion: dev.whiskeyjimbo.io/v1alpha1
+kind: VirtualCluster
+metadata:
+  name: devcluster2
 # spec:
 #   # vcluster:
 #   #   values: {
