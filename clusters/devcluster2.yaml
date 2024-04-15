@@ -1,11 +1,11 @@
-# apiVersion: dev.whiskeyjimbo.io/v1alpha1
-# kind: VirtualCluster
-# metadata:
-#   name: devcluster2
-# spec:
-# #   # vcluster:
-# #   #   values: {
-# #   #     version: 0.19.5
-# #   # #   }
-#   argocd:
-#     values: {}
+apiVersion: dev.whiskeyjimbo.io/v1alpha1
+kind: VirtualCluster
+metadata:
+  name: devcluster2
+spec:
+#   # vcluster:
+#   #   values: {
+#   #     version: 0.19.5
+#   # #   }
+  argocd:
+    values: {}
